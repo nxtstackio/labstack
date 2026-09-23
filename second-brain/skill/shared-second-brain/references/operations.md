@@ -12,7 +12,7 @@ If notes and reality disagree, record the discrepancy and use live evidence/curr
 
 ## Checkpoint
 
-Use [the checkpoint template](../templates/checkpoint.md) for a new task; preserve the established structure of existing notes. Write concise outcomes, not hidden reasoning or transcripts. Include objective, latest steering, constraints/authorization boundary, verified current state, completed work, remaining work, decisions and rationale, attempted approaches with outcomes, blockers, source pointers, validation status, exact next step, last agent and timestamp with timezone.
+Use [the checkpoint template](../templates/checkpoint.md) for a new task; preserve the established structure of existing notes. Write concise outcomes, not hidden reasoning or transcripts. Include objective, latest steering, constraints/authorization boundary, verified current state, completed work, remaining work, decisions and rationale, attempted approaches with outcomes, blockers, source pointers, validation status, exact next step, last agent and an actual timestamp with timezone. Obtain time from an available clock; if unavailable, mark it unknown and use a collision-resistant task ID rather than inventing a wall-clock time. Check uniqueness only within the selected project/task scope, never by searching the whole vault.
 
 Update after meaningful milestones and before an intentional stop or handoff. This cannot guarantee a save before a crash or automatic compaction. Do not invent what an interrupted agent did. Keep the active summary useful and append dated progress; preserve rationale for superseded decisions. Update project links only as needed.
 

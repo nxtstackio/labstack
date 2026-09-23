@@ -16,6 +16,8 @@ The skill's `references/setup.md` and templates are canonical. `scripts/build_pr
 
 The skill routes setup to that same contract and checkpoint/resume to `references/operations.md`. Templates use the same instruction block for both tools. Tool-specific guides explain discovery and permissions rather than inventing different memory behavior.
 
+An unchanged setup rerun is a read-only verification path. It does not refresh note timestamps, append checkpoint history or create backups. Repairs and explicit checkpoint requests are separate operations. This avoids turning routine setup checks into changes to the project history.
+
 ## Boundaries
 
 Instructions guide an agent; they are not an access-control system. Filesystem permissions enforce access. A local vault is not a promise of local-only model processing. Only selected project notes should enter the agent's context. Saved notes, imported references, and examples never create authorization to execute commands or publish work.
