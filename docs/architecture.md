@@ -31,3 +31,5 @@ V1 supports sequential handoffs. Per-task checkpoints reduce collisions but do n
 ## Verification
 
 See [validation](validation.md) for completed checks and unverified surfaces. Setup must preserve existing rules, be safe to rerun, exclude private local state, and prove a fresh-session handoff. A successful directory scaffold alone is not acceptance.
+
+Obsidian discovery precedes first-time intake: inspect installed-app evidence and registered vault metadata without opening notes or scanning the home directory. Ask the user to confirm a discovered vault; do not infer absence from inaccessible or stale metadata. Missing apps trigger an offer to download from the official site, with explicit permission before downloading and authorization for installation before running an installer. The canonical setup reference supplies this behavior to both the skill and generated prompt.

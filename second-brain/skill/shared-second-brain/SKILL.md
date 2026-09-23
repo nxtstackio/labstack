@@ -5,11 +5,11 @@ description: Set up Obsidian-backed shared project memory for Claude Code and Co
 
 # Shared Second Brain
 
-Use inspectable Markdown notes to carry project state between coding agents. Preserve the user's existing project rules and chosen vault. This skill does not install Obsidian or connect a hosted chat to local files.
+Use inspectable Markdown notes to carry project state between coding agents. Preserve the user's existing project rules and chosen vault. Check for Obsidian and registered vaults before asking setup questions. Offer an official download if the app is not found, with user authorization before download or installation. This skill does not connect a hosted chat to local files.
 
 ## Choose the operation
 
-- **Setup or reconnect:** Read [references/setup.md](references/setup.md). Use the bundled templates it identifies. Follow its required guided intake: ask about the user's needs, tools and Obsidian experience, wait for missing answers, then handle setup yourself. Do not skip intake on first-time setup or hand file selection to the user.
+- **Setup or reconnect:** Read [references/setup.md](references/setup.md). Use the bundled templates it identifies. Follow its required guided intake: check the app and vault metadata, ask about the user's needs and tools, and confirm the vault choice, wait for missing answers, then handle setup yourself. Do not skip intake on first-time setup or hand file selection to the user.
 - **Checkpoint or resume:** Read [references/operations.md](references/operations.md), then the selected project's local connection file and relevant notes.
 - **Disconnect or recover:** Follow the recovery section of [references/setup.md](references/setup.md). Preserve all user notes.
 

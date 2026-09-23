@@ -7,16 +7,16 @@ Shared project notes in an Obsidian vault, used by your coding agents.
 Open your coding project in Claude Code, Codex or another local coding agent. Paste this:
 
 ```text
-Read https://github.com/nxtstackio/labstack/blob/main/second-brain/README.md and follow its installation instructions. Ask me what I want to use it for, which tools I use, and whether I already have an Obsidian vault. Wait for my answers, then install and configure it for me. Preserve my existing files and instructions.
+Read https://github.com/nxtstackio/labstack/blob/main/second-brain/README.md and follow its installation instructions. Check for Obsidian and existing vaults first. Ask what I want to use it for, which tools I use, and which vault I want to use. If Obsidian is missing, offer to download it and wait for my permission. Wait for my answers, then install and configure it for me. Preserve my existing files and instructions.
 ```
 
-No setup knowledge is needed. The agent asks what you need and helps you choose an existing Obsidian vault or create a notes folder. It handles the repository files and configuration. To use only the prompt, add: **“Use the prompt only; do not install a skill.”**
+No setup knowledge is needed. The agent checks for Obsidian and existing vaults, asks what you need, and helps you choose a vault or create a notes folder. If Obsidian is missing, it offers to download it. It handles the repository files and configuration. To use only the prompt, add: **“Use the prompt only; do not install a skill.”**
 
 ## Instructions for the coding agent
 
 When the user asks you to install or set up this resource:
 
-1. Begin with guided intake: ask what the user wants to remember or continue, which agents they use, and whether they already have an Obsidian vault. Explain unfamiliar terms, offer simple choices, and wait for missing answers before installing or configuring anything. Follow the detailed intake in the setup reference when retrieved; do not ask answered questions again. Use their selected working project or notes folder as the target, not the downloaded Labstack checkout. Never search their home directory for a vault. Do not install Obsidian or change global agent settings.
+1. Follow the read-only Obsidian discovery and guided intake in `second-brain/skill/shared-second-brain/references/setup.md` (retrieve the source as described below first if needed). Check the installed app and registered vault metadata before asking the user; do not scan their home directory or read their notes. Ask what they want to remember and which tools they use. Offer found vaults and ask which to use. If the app is not found, offer an official download and wait for permission; installation also needs authorization. Explain unfamiliar terms and wait for missing choices before project/vault writes. Use their selected working project or notes folder as the target, not the downloaded Labstack checkout. Do not change global agent settings.
 2. Retrieve this repository into a temporary source directory, or use an existing user-provided Labstack checkout. Source: `https://github.com/nxtstackio/labstack.git`. Use one checkout/revision for all files. If you cannot fetch it, say so and ask for a local checkout; do not claim installation succeeded. Do not run repository scripts to install this resource.
 3. Use the intake answers to select project-local skill installation for the requested agent(s); recommend the current agent when the user is unsure:
 

@@ -64,3 +64,5 @@ No user vault was installed or migrated, and no private fixture logs are distrib
 ## Guided onboarding revision
 
 The README now delegates installation to the agent. The skill setup contract and generated standalone prompt require a first-time conversation about purpose, tools and Obsidian experience before writes. Package validation, generated-prompt parity and whitespace checks passed for this revision. The revised intake and README-led download/install sequence have not been retested in a fresh agent session; earlier runtime results elsewhere in this document cover the previous setup entry flow.
+
+The subsequent discovery revision adds best-effort OS app checks, registered-vault selection and permission-gated official downloads to both entry routes. Static package and generated-prompt checks cover source consistency only; cross-platform discovery and installer execution have not been runtime-tested. No application was downloaded or installed during this revision.
