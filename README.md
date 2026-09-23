@@ -14,14 +14,6 @@ Connect Claude Code and Codex to the same project notes in Obsidian. Keep decisi
 
 **[Start here](second-brain/README.md)** · **[Copy the setup prompt](second-brain/brain-prompt.md)** · **[Get the skill](second-brain/skill/shared-second-brain/SKILL.md)**
 
-## Philosophy
-
-AI tools change quickly. Your context should not have to. We build portable workflows around files you own and can reuse across tools.
-
-## Next Stack
-
-Learn the AI stack. Build something useful.
-
 [nxtstack.io](https://nxtstack.io)
 
 ## Reuse and contribute
