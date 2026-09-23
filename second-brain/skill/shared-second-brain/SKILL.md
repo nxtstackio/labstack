@@ -9,7 +9,7 @@ Use inspectable Markdown notes to carry project state between coding agents. Pre
 
 ## Choose the operation
 
-- **Setup or reconnect:** Read [references/setup.md](references/setup.md). Use the bundled templates it identifies. Follow its required guided intake: check the app and vault metadata, ask about the user's needs and tools, and confirm the vault choice, wait for missing answers, then handle setup yourself. Do not skip intake on first-time setup or hand file selection to the user.
+- **Setup or reconnect:** Read [references/setup.md](references/setup.md). Use the bundled templates it identifies. Follow its required guided intake: check the app and vault metadata, ask about the user's needs and tools, and confirm the vault choice, wait for missing answers, then show the concrete setup locations and obtain confirmation before writes. Handle the confirmed setup yourself. Do not skip intake on first-time setup or hand file selection to the user.
 - **Checkpoint or resume:** Read [references/operations.md](references/operations.md), then the selected project's local connection file and relevant notes.
 - **Disconnect or recover:** Follow the recovery section of [references/setup.md](references/setup.md). Preserve all user notes.
 
