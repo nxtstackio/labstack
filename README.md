@@ -1,21 +1,17 @@
 # Labstack
 
-Prompts, agent skills, templates, and practical AI build resources from Next Stack.
+Skills, prompts and templates from [Next Stack](https://nxtstack.io).
 
-These resources accompany our videos and build experiments. Each resource includes its own setup instructions and examples.
+## Second Brain
 
-## Resources
+Set up shared project notes in Obsidian for Claude Code, Codex or another local coding agent.
 
-### [Shared Second Brain](second-brain/README.md)
+Open the project you want to connect in your coding agent, then paste:
 
-One project. Two agents. Shared memory.
+```text
+Read https://github.com/nxtstackio/labstack/blob/main/second-brain/README.md and follow its installation instructions. Ask me what I want to use it for, which tools I use, and whether I already have an Obsidian vault. Wait for my answers, then install and configure it for me. Preserve my existing files and instructions.
+```
 
-Connect Claude Code and Codex to the same project notes in Obsidian. Keep decisions, progress, and next steps in Markdown you can inspect and edit.
+The agent asks a few questions about your needs, then handles downloading the files and setting everything up. If it does not support skills, it uses the setup prompt instead.
 
-**[Start here](second-brain/README.md)** · **[Copy the setup prompt](second-brain/brain-prompt.md)** · **[Get the skill](second-brain/skill/shared-second-brain/SKILL.md)**
-
-[nxtstack.io](https://nxtstack.io)
-
-## Reuse and contribute
-
-Released under the [MIT license](LICENSE). See [contributing](CONTRIBUTING.md) for checks and privacy expectations. This is an independent Next Stack resource, not an official integration from the tool vendors.
+[Second Brain instructions](second-brain/README.md) · [MIT license](LICENSE)

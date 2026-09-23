@@ -2,9 +2,21 @@
 
 Configure the user's selected coding project to use their chosen Obsidian vault as a shared project-memory hub. Do not assume the current directory is the vault. A notes-only user may select the same directory for both. Do not install applications, change global agent configuration, or publish anything as part of setup.
 
-## 1. Identify and inspect
+## 1. Guided intake: ask, then wait
 
-Ask only for missing choices: coding-project directory, existing vault (or explicit permission to create a new empty vault folder), and project name. Derive a simple project slug matching `[a-z0-9]+(-[a-z0-9]+)*`; confirm ambiguous collisions. Treat a selected existing path that does not exist as an error, not permission to silently create it. Resolve paths using the local filesystem, never invent a username or assume an OS-specific folder. JSON must escape backslashes correctly; prefer forward slashes on Windows.
+On first-time setup, start a short conversation before installing the skill or changing project/vault files. Do not infer the user's needs from the current folder alone. Explain that a vault is simply a folder of notes. Ask these questions in plain language, in at most three questions per message:
+
+- What would you like this to help you remember or continue? For example: work on a coding project, research, writing, or everyday notes. What are you working on first?
+- Which tools do you want to use with these notes: Claude Code, Codex, both, or something else? "I'm not sure" is a valid answer; recommend starting with the current agent.
+- Do you already use Obsidian? If yes, ask which vault folder to use. If no, offer to create a new notes folder they can open in Obsidian. If they do not know its location, guide them to find it rather than searching their home directory.
+
+Wait for answers before proceeding. If the user already supplied an answer, acknowledge it instead of asking it again; ask about any unanswered needs. Never treat silence as acceptance of defaults. Ask follow-up questions only when needed to resolve the target project, selected folder, or a conflict. For a notes-only workflow, explain that the notes folder can also be the project the agent opens. Do not promise automatic capture from hosted chats or unsupported tools.
+
+Summarize their intended use and recommend the simplest setup in a few sentences. Choose technical details yourself: skill destination, filenames, slug and templates. Do not ask the user to pick repository files, edit JSON, run Git commands, or copy instruction blocks. Carry out the supported setup yourself after the answers; if a required action is unavailable to your tools, explain the limitation and give the smallest necessary user step. Record the user's stated purpose in the project note without inventing personal details. On a connected rerun, reuse known choices and follow the read-only rerun rule; repeat intake only for new or changed needs.
+
+### Resolve locations and inspect
+
+Resolve only missing choices: coding-project directory, existing vault (or explicit permission to create a new empty vault folder), and project name. Derive a simple project slug matching `[a-z0-9]+(-[a-z0-9]+)*`; confirm ambiguous collisions. Treat a selected existing path that does not exist as an error, not permission to silently create it. Resolve paths using the local filesystem, never invent a username or assume an OS-specific folder. JSON must escape backslashes correctly; prefer forward slashes on Windows.
 
 Inspect only project-root instruction files, existing local connection data, relevant Git ignore/tracking state, and the selected `Shared Brain` notes if they exist. Do not scan the whole vault. Check that the selected paths resolve to the intended directories, including symlinks, before writing. Never follow links into unrelated directories. During inspection use only non-mutating permission checks. Perform a write/read probe only if setup actually changes files, never on an unchanged rerun; request narrowly scoped access if required by the tool. Never suggest disabling sandboxing or all permission checks.
 

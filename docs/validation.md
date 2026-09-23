@@ -60,3 +60,7 @@ These exercise an agent's execution of documented instructions, not a shipped de
 macOS/Linux, hosted Codex, multi-computer synchronization, an already-tracked vault, actual write-permission denial, interrupted/crash recovery and simultaneous writers were not runtime-tested. V1 supports sequential handoffs only. Do not claim automatic saves before compaction or interruption.
 
 No user vault was installed or migrated, and no private fixture logs are distributed. Nothing was pushed or published during validation. Before a release, repeat the [acceptance exercise](../second-brain/guides/handoff-test.md) on any additional environment you intend to claim as tested.
+
+## Guided onboarding revision
+
+The README now delegates installation to the agent. The skill setup contract and generated standalone prompt require a first-time conversation about purpose, tools and Obsidian experience before writes. Package validation, generated-prompt parity and whitespace checks passed for this revision. The revised intake and README-led download/install sequence have not been retested in a fresh agent session; earlier runtime results elsewhere in this document cover the previous setup entry flow.

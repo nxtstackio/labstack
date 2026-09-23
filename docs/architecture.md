@@ -10,6 +10,10 @@ Mapping schema version 1 has exactly three fields: `schema_version` (1), `vault_
 
 `Shared Brain/index.md` links projects. Each project has `project.md`, optional `decisions/` and a `tasks/<unique-task-id>/checkpoint.md` per task. The project note links active tasks explicitly; the latest filesystem modification time does not select the task. Reference folders are added only when needed.
 
+## Agent-led installation
+
+The root README gives one copyable request pointing to the Second Brain README. That resource README is the installation entrypoint: the agent retrieves one source checkout, copies the complete bundle to its project-local skill directory, and immediately performs setup. Prompt-only and other-agent requests use the standalone prompt. Both the skill and generated prompt require first-time guided intake about purpose, tools and Obsidian experience, with a wait for missing answers before installation or configuration. The agent handles technical choices and performs the setup; users do not choose individual files or install paths. Connected reruns reuse known choices and remain read-only when unchanged. Copying a skill, native discovery and configured memory are reported separately.
+
 ## One setup contract
 
 The skill's `references/setup.md` and templates are canonical. `scripts/build_prompt.py` assembles the standalone copyable prompt from those files. Maintainer validation rejects drift. The standalone prompt needs no download, Python runtime, or installed skill. Python is only used to maintain this repository.
