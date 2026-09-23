@@ -1,0 +1,11 @@
+# Local connections and backups are never public resources.
+.shared-brain.local.json
+.shared-brain-backups/
+.shared-brain-pending/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

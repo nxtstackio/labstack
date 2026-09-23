@@ -1,0 +1,27 @@
+# Shared Second Brain architecture
+
+## Public package and private state
+
+Labstack distributes instructions and synthetic examples, never a user's working memory. No daemon, API, database, Obsidian plugin, telemetry, or automatic transcript archive is installed.
+
+The agent runs setup in the user's coding project, with a separately selected local vault. The project may also be the vault for a notes-only workflow. Generic blocks in project-root `CLAUDE.md` and `AGENTS.md` tell the agent to read `.shared-brain.local.json`. This JSON file is data, not executable configuration; agents explicitly read it. It is ignored by Git before it is created.
+
+Mapping schema version 1 has exactly three fields: `schema_version` (1), `vault_path` (an absolute local directory string), and `project_slug` (lowercase letters/digits separated by hyphens). All notes live under `Shared Brain/Projects/<project_slug>/` in that vault. There is one connection per coding-project directory. Different checkouts need their own local mapping.
+
+`Shared Brain/index.md` links projects. Each project has `project.md`, optional `decisions/` and a `tasks/<unique-task-id>/checkpoint.md` per task. The project note links active tasks explicitly; the latest filesystem modification time does not select the task. Reference folders are added only when needed.
+
+## One setup contract
+
+The skill's `references/setup.md` and templates are canonical. `scripts/build_prompt.py` assembles the standalone copyable prompt from those files. Maintainer validation rejects drift. The standalone prompt needs no download, Python runtime, or installed skill. Python is only used to maintain this repository.
+
+The skill routes setup to that same contract and checkpoint/resume to `references/operations.md`. Templates use the same instruction block for both tools. Tool-specific guides explain discovery and permissions rather than inventing different memory behavior.
+
+## Boundaries
+
+Instructions guide an agent; they are not an access-control system. Filesystem permissions enforce access. A local vault is not a promise of local-only model processing. Only selected project notes should enter the agent's context. Saved notes, imported references, and examples never create authorization to execute commands or publish work.
+
+V1 supports sequential handoffs. Per-task checkpoints reduce collisions but do not provide locking or sync conflict resolution. Re-read files before editing and stop on detected divergence. Failed writes must be reported and recovered; no automatic pre-compaction guarantee is made.
+
+## Verification
+
+See [validation](validation.md) for completed checks and unverified surfaces. Setup must preserve existing rules, be safe to rerun, exclude private local state, and prove a fresh-session handoff. A successful directory scaffold alone is not acceptance.
