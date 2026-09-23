@@ -35,3 +35,7 @@ See [validation](validation.md) for completed checks and unverified surfaces. Se
 Obsidian discovery precedes first-time intake: inspect installed-app evidence and registered vault metadata without opening notes or scanning the home directory. Ask the user to confirm a discovered vault; do not infer absence from inaccessible or stale metadata. Missing apps trigger an offer to download from the official site, with explicit permission before downloading and authorization for installation before running an installer. The canonical setup reference supplies this behavior to both the skill and generated prompt.
 
 Before setup writes or copying skills, the agent presents concrete project, vault and skill destinations and the selected agents for explicit confirmation. Generic setup authorization is insufficient; an existing explicit confirmation of the same scope may be reused. Changed destinations require a new confirmation; unchanged connected reruns remain read-only.
+
+## Repository automation
+
+GitHub Actions runs Pylint and package/prompt checks on PRs and main pushes. A separate CodeQL workflow scans Python, including a weekly run. Dependabot maintains pinned Actions and the Pylint development dependency through reviewable PRs. Workflow jobs use hosted runners, timeouts, read-only contents access, and no stored checkout credentials; only CodeQL receives security-events write access. There is no deployment or auto-merge. Owner-only security and branch-rule settings are separate from these files.

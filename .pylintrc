@@ -1,0 +1,6 @@
+[MESSAGES CONTROL]
+# Check errors and warnings; prose-oriented scripts do not need style scoring.
+disable=C,R
+
+[REPORTS]
+score=no

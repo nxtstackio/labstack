@@ -1,5 +1,4 @@
 """Validate package integrity without reading private state or requiring dependencies."""
-from pathlib import Path
 import re
 import sys
 from urllib.parse import unquote, urlsplit
