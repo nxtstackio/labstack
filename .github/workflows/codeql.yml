@@ -24,4 +24,4 @@ jobs:
           languages: python
           build-mode: none
           queries: security-extended
-      - uses: github/codeql-action/analyze@d8073367669608af8fbcc5f63dd0a0d52bb90cff # v4
+      - uses: github/codeql-action/analyze@776237d428f23fefc3d9e0fe1962921cbcd53e17 # v4
